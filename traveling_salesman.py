@@ -1,4 +1,4 @@
-
+import random
 
 
 
@@ -45,7 +45,7 @@ def breadth_first_search(curr_list):
 			if not x in visited_and_position:
 				possible_next_nodes.append(x)
 
-		if possible_next_nodes == [] and state.position != 0: #SE nao tem para onde ir, pode ir pro 0, a menos que jan esteja lah
+		if possible_next_nodes == [] and state.position != 0: #SE nao tem para onde ir, pode ir pro 0, a menos que jah esteja lah
 			possible_next_nodes = [0]
 		
 
@@ -127,30 +127,19 @@ while True:
 	curr_list = next_list
 
 
-
+#se der certo, sobra apenas um estado com a distancia minima
 print("distances:")
 for state in curr_list:
 	print(state.distance)
 
 
-#se der certo, sobra apenas um estado com a distancia minima
 
 
 
 
-#testes antes de implementar coisas:
-def pre_tests():
-	print("=" * 20)
-	my_dict = {}
-	my_dict[(1, 2)] = 3
-	print(my_dict[(1, 2)])
-
-	print(tuple([1, 2]))
 
 
 
-
-import random
 
 def generate_matrix(n):
 	matrix = [[random.randint(1, 100) for _ in range(n)] for _ in range(n)]
